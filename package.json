@@ -5,7 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "format": "prettier --write .",
     "watch": "ng build --watch --configuration development",
+    "build:prod": "ng build --configuration production --base-href https://ghislain1.github.io/personal/ --verbose true",
     "test": "ng test",
     "serve:ssr:personal": "node dist/personal/server/server.mjs"
   },
@@ -49,6 +51,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "prettier": "^3.6.2",
     "typescript": "~5.9.2"
   }
 }
