@@ -1,5 +1,5 @@
 // IMPORT like other programming languages
-@import "bootstrap/dist/css/bootstrap.min.css";
+@import 'bootstrap/dist/css/bootstrap.min.css';
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
@@ -24,237 +24,231 @@ $font-weight-light: 200;
 // Custom Border Variables
 $border-radius-xl: 1rem;
 
-
-
 // Resets for body and html height for sticky footer
 body,
 html {
-    height: 100%;
+  height: 100%;
 }
 
 // Custom utilities to extend Bootstrap's utility classes
 
 // Background gradient utility for a primary to secondary gradient
 .bg-gradient-primary-to-secondary {
-    background: $primary;
-    background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+  background: $primary;
+  background: linear-gradient(135deg, $primary 0%, $secondary 100%);
 }
 
 // Utility for creating gradient text
 // Note: When using gradient text, it is best utilized on
 // text that has the position set to inline
 .text-gradient {
-    background: -webkit-linear-gradient(315deg, $primary 0%, $secondary 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(315deg, $primary 0%, $secondary 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 // Additional rounded border utility that uses a custom XL border radius (defined in _variables.scss)
 .rounded-4 {
-    border-radius: $border-radius-xl !important;
+  border-radius: $border-radius-xl !important;
 }
 
 // Custom SCSS for feature component using Bootstrap icons
 .feature {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 3rem;
-    width: 3rem;
-    font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.5rem;
 }
 
 // Custom component for profile picture on the homepage
 
 .profile {
-    position: relative;
-    height: 75vw;
-    width: 75vw;
-    border-radius: 5vw;
-    margin-top: 5vw;
-    max-height: 40rem;
-    max-width: 40rem;
+  position: relative;
+  height: 75vw;
+  width: 75vw;
+  border-radius: 5vw;
+  margin-top: 5vw;
+  max-height: 40rem;
+  max-width: 40rem;
 
-    .profile-img {
-        height: 80vw;
-        max-height: 45rem;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+  .profile-img {
+    height: 80vw;
+    max-height: 45rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .dots-1 {
+    position: absolute;
+    width: 3vw;
+    right: 1.5vw;
+    top: 4vw;
+
+    svg {
+      fill: $white;
     }
+  }
 
-    .dots-1 {
-        position: absolute;
-        width: 3vw;
-        right: 1.5vw;
-        top: 4vw;
+  .dots-2 {
+    position: absolute;
+    width: 3vw;
+    right: -4vw;
+    top: 6.05vw;
 
-        svg {
-            fill: $white;
-        }
+    svg {
+      fill: $primary;
     }
+  }
 
-    .dots-2 {
-        position: absolute;
-        width: 3vw;
-        right: -4vw;
-        top: 6.05vw;
+  .dots-3 {
+    position: absolute;
+    width: 3vw;
+    left: 1.5vw;
+    bottom: 6.05vw;
 
-        svg {
-            fill: $primary;
-        }
+    svg {
+      fill: $white;
     }
+  }
 
-    .dots-3 {
-        position: absolute;
-        width: 3vw;
-        left: 1.5vw;
-        bottom: 6.05vw;
+  .dots-4 {
+    position: absolute;
+    width: 3vw;
+    left: -4vw;
+    bottom: 4vw;
 
-        svg {
-            fill: $white;
-        }
+    svg {
+      fill: $primary;
     }
-
-    .dots-4 {
-        position: absolute;
-        width: 3vw;
-        left: -4vw;
-        bottom: 4vw;
-
-        svg {
-            fill: $primary;
-        }
-    }
-
+  }
 }
 
 // Responsive styling for profile photo component
 
 @include media-breakpoint-up(sm) {
-    .profile {
-        height: 60vw;
-        width: 60vw;
+  .profile {
+    height: 60vw;
+    width: 60vw;
 
-        .profile-img {
-            height: 65vw;
-        }
-
-        .dots-1 {
-            width: 3vw;
-            right: 1.5vw;
-        }
-
-        .dots-2 {
-            width: 3vw;
-            right: -4vw;
-        }
-
-        .dots-3 {
-            width: 3vw;
-            left: 1.5vw;
-        }
-
-        .dots-4 {
-            width: 3vw;
-            left: -4vw;
-        }
-
+    .profile-img {
+      height: 65vw;
     }
+
+    .dots-1 {
+      width: 3vw;
+      right: 1.5vw;
+    }
+
+    .dots-2 {
+      width: 3vw;
+      right: -4vw;
+    }
+
+    .dots-3 {
+      width: 3vw;
+      left: 1.5vw;
+    }
+
+    .dots-4 {
+      width: 3vw;
+      left: -4vw;
+    }
+  }
 }
 
 @include media-breakpoint-up(md) {
-    .profile {
-        height: 50vw;
-        width: 50vw;
+  .profile {
+    height: 50vw;
+    width: 50vw;
 
-        .profile-img {
-            height: 55vw;
-        }
-
-        .dots-1 {
-            width: 3vw;
-            right: 1.5vw;
-        }
-
-        .dots-2 {
-            width: 3vw;
-            right: -4vw;
-        }
-
-        .dots-3 {
-            width: 3vw;
-            left: 1.5vw;
-        }
-
-        .dots-4 {
-            width: 3vw;
-            left: -4vw;
-        }
-
+    .profile-img {
+      height: 55vw;
     }
+
+    .dots-1 {
+      width: 3vw;
+      right: 1.5vw;
+    }
+
+    .dots-2 {
+      width: 3vw;
+      right: -4vw;
+    }
+
+    .dots-3 {
+      width: 3vw;
+      left: 1.5vw;
+    }
+
+    .dots-4 {
+      width: 3vw;
+      left: -4vw;
+    }
+  }
 }
 
 @include media-breakpoint-up(lg) {
-    .profile {
-        height: 40vw;
-        width: 40vw;
+  .profile {
+    height: 40vw;
+    width: 40vw;
 
-        .profile-img {
-            height: 45vw;
-        }
-
-        .dots-1 {
-            width: 1.5vw;
-            right: 0.75vw;
-        }
-
-        .dots-2 {
-            width: 1.5vw;
-            right: -2vw;
-        }
-
-        .dots-3 {
-            width: 1.5vw;
-            left: 0.75vw;
-        }
-
-        .dots-4 {
-            width: 1.5vw;
-            left: -2vw;
-        }
-
+    .profile-img {
+      height: 45vw;
     }
+
+    .dots-1 {
+      width: 1.5vw;
+      right: 0.75vw;
+    }
+
+    .dots-2 {
+      width: 1.5vw;
+      right: -2vw;
+    }
+
+    .dots-3 {
+      width: 1.5vw;
+      left: 0.75vw;
+    }
+
+    .dots-4 {
+      width: 1.5vw;
+      left: -2vw;
+    }
+  }
 }
 
 @include media-breakpoint-up(xl) {
-    .profile {
-        height: 35vw;
-        width: 35vw;
+  .profile {
+    height: 35vw;
+    width: 35vw;
 
-        .profile-img {
-            height: 40vw;
-        }
-
-        .dots-1 {
-            width: 1.5vw;
-            right: 0.75vw;
-        }
-
-        .dots-2 {
-            width: 1.5vw;
-            right: -2vw;
-        }
-
-        .dots-3 {
-            width: 1.5vw;
-            left: 0.75vw;
-        }
-
-        .dots-4 {
-            width: 1.5vw;
-            left: -2vw;
-        }
+    .profile-img {
+      height: 40vw;
     }
+
+    .dots-1 {
+      width: 1.5vw;
+      right: 0.75vw;
+    }
+
+    .dots-2 {
+      width: 1.5vw;
+      right: -2vw;
+    }
+
+    .dots-3 {
+      width: 1.5vw;
+      left: 0.75vw;
+    }
+
+    .dots-4 {
+      width: 1.5vw;
+      left: -2vw;
+    }
+  }
 }
