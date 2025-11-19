@@ -11,6 +11,7 @@
   -
 
 # Deployments
+
 - deploy angular app in docs folder using github action
   - Update angular.json
   - Enable GitHub Pages
