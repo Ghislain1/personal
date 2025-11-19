@@ -6,7 +6,7 @@ on:
       - main
 permissions:
   contents: write   # REQUIRED for committing/pushing
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,7 +29,7 @@ jobs:
       - name: Commit docs folder
         run: |
           git config user.name "Ghislain1"
-          git config user.email "ghislain1@example.com"
+          git config user.email "ghislain1@outlook.de"
           git add docs
           git commit -m "Update docs build" || echo "No changes to commit"
           git push
