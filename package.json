@@ -10,7 +10,7 @@
     "build:prod": "ng build --configuration production --base-href https://ghislain1.github.io/personal/ --verbose true && npm run postbuild",
     "test": "ng test",
     "serve:ssr:personal": "node dist/personal/server/server.mjs",
-    "postbuild": "rm -rf docs-temp && mv docs/personal/browser docs-temp && rm -rf docs && mv docs-temp docs"
+    "postbuild": "rm -rf docs-temp && mv docs/browser docs-temp && rm -rf docs && mv docs-temp docs"
   },
   "prettier": {
     "printWidth": 100,
