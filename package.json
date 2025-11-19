@@ -7,7 +7,7 @@
     "build": "ng build",
     "format": "prettier --write .",
     "watch": "ng build --watch --configuration development",
-    "build:prod": "ng build --configuration production --base-href https://ghislain1.github.io/personal/ --verbose true && npm run postbuild",
+    "build:prod": "rm -rf docs && ng build --configuration production --base-href https://ghislain1.github.io/personal/ --verbose true && npm run postbuild",
     "test": "ng test",
     "serve:ssr:personal": "node dist/personal/server/server.mjs",
     "postbuild": "rm -rf docs-temp && mv docs/browser docs-temp && rm -rf docs && mv docs-temp docs"
@@ -34,6 +34,8 @@
     "@angular/platform-server": "^20.3.0",
     "@angular/router": "^20.3.0",
     "@angular/ssr": "^20.3.9",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
