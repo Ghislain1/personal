@@ -5,7 +5,7 @@ on:
     branches:
       - main
 permissions:
-  contents: write   # REQUIRED for committing/pushing
+  contents: write # REQUIRED for committing/pushing
 
 jobs:
   build:

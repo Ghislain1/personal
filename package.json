@@ -9,7 +9,8 @@
     "watch": "ng build --watch --configuration development",
     "build:prod": "ng build --configuration production --base-href https://ghislain1.github.io/personal/ --verbose true",
     "test": "ng test",
-    "serve:ssr:personal": "node dist/personal/server/server.mjs"
+    "serve:ssr:personal": "node dist/personal/server/server.mjs",
+    "postbuild": "rm -rf docs-temp && mv dist/personal/browser docs-temp && rm -rf dist && mv docs-temp docs"
   },
   "prettier": {
     "printWidth": 100,
